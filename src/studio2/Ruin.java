@@ -37,25 +37,28 @@ public class Ruin {
 			while (totalAmount < winLimit && totalAmount > 0)
 			{		
 				randoVariable=Math.random();
-					if (randoVariable <= winChance)
-					{
-						totalAmount += 1;
+				if (randoVariable <= winChance)
+				{
+					totalAmount += 1;
 						//System.out.println("Your new total is " + totalAmount + " dollars.");
-					}
-					else
-					{
-						totalAmount -=1;
-						//System.out.println("Your new total is " + totalAmount + " dollars.");
-					}
 				}
+				else
+				{
+					totalAmount -=1;
+						//System.out.println("Your new total is " + totalAmount + " dollars.");
+				}
+			}
 			if (totalAmount==0) {
 				ruinCounter++;
 				totalAmount=startAmount;
-				
 			}
 		}
 		System.out.println("This is the number of days there were: "+totalSimulation+ " and This is the number of days you ruined "+ ruinCounter);
-		}
-	
+		
+		//calculate theoretical yield
+		
+		
 	}
+	
+}
 
